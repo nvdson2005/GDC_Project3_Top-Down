@@ -56,5 +56,5 @@
         "temp/": true,
         "Temp/": true
     },
-    "dotnet.defaultSolution": "GDC_Project3_TopDown.sln"
+    "dotnet.defaultSolution": "GDC_Project3_Top-Down.sln"
 }
