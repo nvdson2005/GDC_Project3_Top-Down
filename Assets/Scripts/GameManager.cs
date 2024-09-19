@@ -11,7 +11,7 @@ public class GameManager : MonoBehaviour
 
     public GameObject currentPlant;
 
-    public GameObject plantSeed;
+    public GameObject[] plantSeed;
 
     public GameObject player;
 
@@ -30,11 +30,11 @@ public class GameManager : MonoBehaviour
                 currentTile = hit.transform;
                 if (currentTile.GetComponent<PlantSlot>().hasPlant == false)
                 {
-                    plantSeed.SetActive(true);       
+                    ImageAppear();
                 }
                 else
                 {
-                    plantSeed.SetActive(false);
+                    ImageDisappear();
                     if (currentTile.GetComponent<PlantSlot>().plant.GetComponent<Plant>().isGrowth == true)
                     {
                         if (Input.GetKeyDown(KeyCode.F))
@@ -49,10 +49,26 @@ public class GameManager : MonoBehaviour
             }
             else
             {
-                plantSeed.SetActive(false);
+                ImageDisappear();
             }
         }
     }
+    private void ImageAppear()
+    {
+        foreach (GameObject image in plantSeed)
+        {
+            image.SetActive(true);
+        }
+    }
+
+    private void ImageDisappear()
+    {
+        foreach (GameObject image in plantSeed)
+        {
+            image.SetActive(false);
+        }
+    }
+
     public void ChoosePlant(GameObject plant)
     {
         currentPlant = plant;
@@ -65,7 +81,7 @@ public class GameManager : MonoBehaviour
             GameObject planted = Instantiate(currentPlant, hit.transform.position, Quaternion.identity);
             currentTile.GetComponent<PlantSlot>().hasPlant = true;
             currentTile.GetComponent<PlantSlot>().plant = planted;
-            planted.GetComponent<Strawberry>().plantedSlot = currentTile;
+            planted.GetComponent<Plant>().plantedSlot = currentTile;
 
             currentPlant = GameObject.FindGameObjectWithTag("Temp");
         }  

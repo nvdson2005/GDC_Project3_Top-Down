@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Strawberry : Plant
+public class Potato : Plant
 {
     public Animator animator;
 

@@ -5,4 +5,5 @@ using UnityEngine;
 public class Plant : MonoBehaviour
 {
     public bool isGrowth;
+    public Transform plantedSlot;
 }
