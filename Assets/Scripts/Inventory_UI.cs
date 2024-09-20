@@ -19,9 +19,9 @@ public class Inventory_UI : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        Setup();
         if(Input.GetKeyDown(KeyCode.Tab) && !isUIOpen){
             UIToggle();
-            Setup();
         } else if (Input.GetKeyDown(KeyCode.Tab) && isUIOpen){
             UIToggle();
         }
