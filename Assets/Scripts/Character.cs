@@ -42,7 +42,7 @@ public class Character : MonoBehaviour
         {
             animator.SetFloat("X", -1);
             animator.SetFloat("Y", 0);
-            visual.GetComponent<SpriteRenderer>().flipX = true;
+            // visual.GetComponent<SpriteRenderer>().flipX = true;
         }
         else if (Input.GetKey(KeyCode.S))
         {
@@ -53,7 +53,7 @@ public class Character : MonoBehaviour
         {
             animator.SetFloat("X", 1);
             animator.SetFloat("Y", 0);
-            visual.GetComponent<SpriteRenderer>().flipX = false;
+            // visual.GetComponent<SpriteRenderer>().flipX = false;
         }
     }
 
