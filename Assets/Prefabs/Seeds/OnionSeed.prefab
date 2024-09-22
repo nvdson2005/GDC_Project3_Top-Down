@@ -143,5 +143,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b333e257acb73944789ee5a7a569f4b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  icon: {fileID: 76362904, guid: bbe9dfb8c1870db40ba0c8e99283d50f, type: 3}
+  icon: {fileID: -353744866, guid: bbe9dfb8c1870db40ba0c8e99283d50f, type: 3}
   type: 4

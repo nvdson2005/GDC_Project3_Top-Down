@@ -6,6 +6,7 @@ public class Slot_UI : MonoBehaviour
 {
     public Image icon;
     public Text amountText;
+
     public void SetItem(Inventory.Slot slot){
         if(slot != null){
             icon.sprite = slot.icon;
