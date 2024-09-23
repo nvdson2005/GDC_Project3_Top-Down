@@ -42,3 +42,12 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Tilemaps
+    uniqueID: 1574794647
+    locked: 0
+  - name: Objects
+    uniqueID: 578238545
+    locked: 0
+  - name: Player
+    uniqueID: 1763551581
+    locked: 0
