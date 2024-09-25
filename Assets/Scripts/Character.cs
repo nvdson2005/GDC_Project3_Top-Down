@@ -18,6 +18,10 @@ public class Character : MonoBehaviour
         float vertical = Input.GetAxisRaw("Vertical");
 
         direction = new Vector3(horizontal, vertical, 0);    
+        if (Input.GetMouseButtonDown(0))
+        {
+            animator.SetTrigger("attack");
+        }
     }
 
     private void FixedUpdate()
@@ -61,6 +65,5 @@ public class Character : MonoBehaviour
             // visual.GetComponent<SpriteRenderer>().flipX = false;
         }
     }
-
 
 }
