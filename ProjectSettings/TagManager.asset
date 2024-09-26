@@ -5,17 +5,18 @@ TagManager:
   serializedVersion: 2
   tags:
   - Temp
+  - Enemy
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Wall
   - Water
   - UI
   - PlantSlot
   - SelectSeed
   - DeselectSeed
-  - 
+  - Player
   - 
   - 
   - 
