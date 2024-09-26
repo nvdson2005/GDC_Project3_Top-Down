@@ -40,12 +40,12 @@ public class SlimePatrolAndAttack : MonoBehaviour
         {
             StartCoroutine(Patrol());
         }
-        ///This is used to try the hit, death and drop loot function
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            TakeDamage(1);
-        }
-        ///
+        // ///This is used to try the hit, death and drop loot function
+        // if (Input.GetKeyDown(KeyCode.Space))
+        // {
+        //     TakeDamage(1);
+        // }
+        // ///
     }
     public void TakeDamage(int hp)
     {
@@ -76,7 +76,6 @@ public class SlimePatrolAndAttack : MonoBehaviour
     void Attack()
     {
         rigid.velocity = Vector2.zero;
-        //transform.position = Vector2.MoveTowards(transform.position, playerTarget.position, 2*speed*Time.deltaTime);
         transform.DOMove(playerTarget.position, 1.5f);
         anim.SetBool("isAttacking", true);
         if ((transform.position.x > playerTarget.position.x))
@@ -85,7 +84,7 @@ public class SlimePatrolAndAttack : MonoBehaviour
         }
         if (Vector2.Distance(transform.position, playerTarget.position) < 0.75f)
         {
-            //Take Damage of player here
+            //Call to the player's take damage function here
             ///
             ///
             ///
@@ -99,14 +98,9 @@ public class SlimePatrolAndAttack : MonoBehaviour
     }
     bool PlayerInRange()
     {
-        // RaycastHit2D detectray = Physics2D.CircleCast(transform.position, detectRange, Vector2.zero);
-        // if(detectray){
-        //     if(detectray.collider.gameObject.CompareTag("Player")){
-        //         //player = detectray.collider.gameObject;
-        //         playerTarget = detectray.collider.transform;
-        //         return true;
-        //     } else return false;
-        // } else return false;
+        //Detect the player in a circle area around the enemy
+
+
         Collider2D detector = Physics2D.OverlapCircle(transform.position, detectRange, 1 << LayerMask.NameToLayer("Player"));
         if (detector)
         {
@@ -119,10 +113,14 @@ public class SlimePatrolAndAttack : MonoBehaviour
     {
         if (isDead)
         {
+            //When the enemy dies, it stops moving
+
+
             rigid.velocity = Vector2.zero;
         }
         else
         {
+            //Just normally patrol
             if (isRunning)
             {
                 if (goingAhead) transform.localScale = defaultScaleVector;
@@ -141,27 +139,26 @@ public class SlimePatrolAndAttack : MonoBehaviour
     }
     void OnCollisionEnter2D(Collision2D other)
     {
+        //Detect wall to change the direction
+
+
         if (other.gameObject.layer == LayerMask.NameToLayer("Wall"))
         {
             direction = direction * -1;
             isRunning = false;
             goingAhead = !goingAhead;
         }
-        // if(other.gameObject.CompareTag("Player")){
-        //     Debug.Log("Collided!");
-        //     transform.position = Vector2.MoveTowards(transform.position, playerTarget.position, -speed*Time.deltaTime);
-        //     afterAttack = true;
-        //     StartCoroutine(ResetAfterAttack());
-        // }
     }
     IEnumerator ResetAfterAttack()
     {
+        //Move back from the player, after 3 secs enable the attack again
         transform.position = Vector2.MoveTowards(transform.position, playerTarget.position, -speed * Time.deltaTime);
         yield return new WaitForSeconds(3f);
         afterAttack = false;
     }
     void OnDrawGizmos()
     {
+        //Draw the detect range of the enemy on editor
         Gizmos.DrawWireSphere(transform.position, detectRange);
     }
 }

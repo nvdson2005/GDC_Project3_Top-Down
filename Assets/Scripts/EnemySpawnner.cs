@@ -8,10 +8,14 @@ public class EnemySpawnner : MonoBehaviour
     public GameObject[] gameObjectsList;
     public GameObject[] spawnners;
     private float counter = 0f;
-    bool firsttime = true;
-    // Start is called before the first frame update
     void Start()
     {
+        /* 
+        
+        
+                First Time Spawn
+
+        */
         for (int i = 0; i < spawnners.Length; i++)
         {
             GameObject tmp = Instantiate(gameObjectPrefab, spawnners[i].transform.position, Quaternion.identity);
@@ -25,10 +29,10 @@ public class EnemySpawnner : MonoBehaviour
                 gameObjectsList[i] = tmp;
             }
         }
-        //StartCoroutine(SpawnEnemy());
     }
     void Update()
     {
+        //Continuous time spawn
         Spawn();
     }
 
