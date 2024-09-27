@@ -43,10 +43,10 @@ public class SlimePatrolAndAttack : MonoBehaviour
             StartCoroutine(Patrol());
         }
         ///This is used to try the hit, death and drop loot function
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            TakeDamage(1);
-        }
+        // if (Input.GetKeyDown(KeyCode.Space))
+        // {
+        //     TakeDamage(1);
+        // }
         ///
     }
     public void TakeDamage(int hp)
@@ -93,6 +93,7 @@ public class SlimePatrolAndAttack : MonoBehaviour
             ///
             ///
             ///
+            playerTarget.gameObject.GetComponent<PlayerCombatHandler>().TakeDamage(transform.position);
             Debug.Log("Attacked");
             transform.localScale = defaultScaleVector;
             afterAttack = true;

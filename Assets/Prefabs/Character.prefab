@@ -117,6 +117,7 @@ GameObject:
   - component: {fileID: 6965327419268933320}
   - component: {fileID: 3709721901368775319}
   - component: {fileID: 4365811475688258907}
+  - component: {fileID: 4831857082487990555}
   m_Layer: 9
   m_Name: Visual
   m_TagString: Untagged
@@ -177,9 +178,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 2
+  m_SortingLayerID: 1763551581
+  m_SortingLayer: 3
+  m_SortingOrder: 3
   m_Sprite: {fileID: 1990504240, guid: 3c7fb0fa9ac116c4a81bc248011c6891, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -212,6 +213,20 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &4831857082487990555
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5550399509966231642}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce60949d71258d14eb37fb15eaf4b29f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  atkRange: 0
+  pushBackForce: 0
 --- !u!1 &6934472128453873235
 GameObject:
   m_ObjectHideFlags: 0
@@ -225,6 +240,7 @@ GameObject:
   - component: {fileID: 3538939276111011070}
   - component: {fileID: 3952576146606801875}
   - component: {fileID: 1824270579230835221}
+  - component: {fileID: 1822360168075050565}
   m_Layer: 9
   m_Name: Character
   m_TagString: Player
@@ -321,8 +337,8 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
+  m_Mass: 500
+  m_LinearDrag: 5
   m_AngularDrag: 0.05
   m_GravityScale: 0
   m_Material: {fileID: 0}
@@ -351,3 +367,17 @@ MonoBehaviour:
   inventory:
     slots: []
   numSlots: 10
+--- !u!114 &1822360168075050565
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6934472128453873235}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce60949d71258d14eb37fb15eaf4b29f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  atkRange: 0.75
+  pushBackForce: 12500
