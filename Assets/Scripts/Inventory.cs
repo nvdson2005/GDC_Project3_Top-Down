@@ -68,4 +68,26 @@ public class Inventory
             }
         }
     }
+    
+    public void Subtract(CollectableType subtract)
+    {
+        int numSlot = slots.Count;
+        for (int i=0; i < numSlot; i++)
+        {
+            if (slots[i].type == subtract)
+            {
+                if (slots[i].count <= 1)
+                {
+                    slots.RemoveAt(i);
+                    Slot slot = new Slot();
+                    slots.Add(slot);
+                }
+                else
+                {
+                    slots[i].count--;
+                }
+                return;
+            }
+        }
+    }
 }

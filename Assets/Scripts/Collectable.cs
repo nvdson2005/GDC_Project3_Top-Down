@@ -19,5 +19,5 @@ public class Collectable : MonoBehaviour
 //Types of collectable. If you want to add more collectable things, add here
 public enum CollectableType
 {
-    NONE, STRAWBERRY_SEEED, RADISH_SEED, POTATO_SEED, ONION_SEED
+    NONE, STRAWBERRY_SEEED, RADISH_SEED, POTATO_SEED, ONION_SEED, HEALING_EGG, ATTACK_EGG, SPEED_EGG
 }
