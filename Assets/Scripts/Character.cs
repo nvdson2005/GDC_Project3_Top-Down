@@ -21,6 +21,7 @@ public class Character : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
         {
             animator.SetTrigger("attack");
+            GetComponent<PlayerCombatHandler>().Attack(horizontal, vertical);
         }
     }
 
@@ -65,5 +66,5 @@ public class Character : MonoBehaviour
             // visual.GetComponent<SpriteRenderer>().flipX = false;
         }
     }
-
+    
 }
