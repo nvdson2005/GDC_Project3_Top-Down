@@ -48,7 +48,7 @@ public class EnemySpawnner : MonoBehaviour
             if (gameObjectsList[i] == null)
             {
                 counter += Time.deltaTime;
-                if (counter >= 5f)
+                if (counter >= 15f)
                 {
                     GameObject tmp = Instantiate(gameObjectPrefab, spawnners[i].transform.position, Quaternion.identity);
                     gameObjectsList[i] = tmp;

@@ -73,7 +73,7 @@ public class SlimePatrolAndAttack : MonoBehaviour
         //This is used for drop loot items
         GetComponent<EnemyLootList>().InstantiateLootObject(transform.position);
         //
-        Destroy(gameObject, 1f);
+        Destroy(gameObject, 0.5f);
     }
     void Attack()
     {

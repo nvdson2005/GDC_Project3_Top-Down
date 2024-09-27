@@ -160,7 +160,7 @@ MonoBehaviour:
   damage: 1
   attacking: 0
   afterAttack: 0
-  detectRange: 1.52
+  detectRange: 0.85
   direction: {x: 1, y: 0}
   speed: 5
 --- !u!50 &1398797959466442243
