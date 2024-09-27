@@ -89,7 +89,7 @@ public class Character : MonoBehaviour
             }
         }
     }
-<<<<<<< HEAD
+
 
     private void ResetHitting()
     {
@@ -151,7 +151,5 @@ public class Character : MonoBehaviour
             }
         }
     }
-=======
-    
->>>>>>> 10add8dafe5e94dad0c16fb715c3bf93514e6a95
+
 }
