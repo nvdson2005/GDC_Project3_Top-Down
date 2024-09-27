@@ -19,13 +19,18 @@ public class EnemySpawnner : MonoBehaviour
         for (int i = 0; i < spawnners.Length; i++)
         {
             GameObject tmp = Instantiate(gameObjectPrefab, spawnners[i].transform.position, Quaternion.identity);
+            tmp.GetComponent<SlimePatrolAndAttack>().RandomizeDirection();
+            tmp.GetComponent<SlimePatrolAndAttack>().RandomizeHp();
             gameObjectsList[i] = tmp;
         }
+        //////Second for loop to make sure all the enemies are spawned
         for (int i = 0; i < spawnners.Length; i++)
         {
             if (gameObjectsList[i] == null)
             {
                 GameObject tmp = Instantiate(gameObjectPrefab, spawnners[i].transform.position, Quaternion.identity);
+                tmp.GetComponent<SlimePatrolAndAttack>().RandomizeDirection();
+                tmp.GetComponent<SlimePatrolAndAttack>().RandomizeHp();
                 gameObjectsList[i] = tmp;
             }
         }
@@ -46,7 +51,7 @@ public class EnemySpawnner : MonoBehaviour
                 if (counter >= 5f)
                 {
                     GameObject tmp = Instantiate(gameObjectPrefab, spawnners[i].transform.position, Quaternion.identity);
-                    gameObjectsList[i] = tmp; 
+                    gameObjectsList[i] = tmp;
                     counter = 0f;
                 }
             }

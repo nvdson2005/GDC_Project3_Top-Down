@@ -13,7 +13,7 @@ public class SlimePatrolAndAttack : MonoBehaviour
     bool isDead = false;
     Transform playerTarget;
     [SerializeField] float detectRange;
-    [SerializeField] Vector3 direction;
+    [SerializeField] Vector2 direction = Vector2.right;
     [SerializeField] float speed;
     bool isRunning = true;
     bool goingAhead = true;
@@ -40,12 +40,12 @@ public class SlimePatrolAndAttack : MonoBehaviour
         {
             StartCoroutine(Patrol());
         }
-        // ///This is used to try the hit, death and drop loot function
-        // if (Input.GetKeyDown(KeyCode.Space))
-        // {
-        //     TakeDamage(1);
-        // }
-        // ///
+        ///This is used to try the hit, death and drop loot function
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            TakeDamage(1);
+        }
+        ///
     }
     public void TakeDamage(int hp)
     {
@@ -160,5 +160,24 @@ public class SlimePatrolAndAttack : MonoBehaviour
     {
         //Draw the detect range of the enemy on editor
         Gizmos.DrawWireSphere(transform.position, detectRange);
+    }
+    /*
+    
+        This is used for random customization of direction in EnemySpawnner.cs
+
+    */
+    public void RandomizeDirection()
+    {
+        direction = new Vector2(Random.Range(-1f, 1f), Random.Range(-1f, 1f));
+        direction = direction.normalized;
+    }
+    /* 
+    
+        This function is used to randomize HP of slimes when spawnning
+    
+    */
+    public void RandomizeHp()
+    {
+        HP = Random.Range(2, 5);
     }
 }
