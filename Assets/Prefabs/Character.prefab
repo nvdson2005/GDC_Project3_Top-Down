@@ -379,5 +379,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce60949d71258d14eb37fb15eaf4b29f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  atkRange: 0.5
+  atkRange: 0.75
   pushBackForce: 12500
