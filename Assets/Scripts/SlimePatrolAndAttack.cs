@@ -8,8 +8,10 @@ public class SlimePatrolAndAttack : MonoBehaviour
 {
     ///
     int HP = 3;
+    public int damage;
     ///
-    bool afterAttack = false;
+    public bool attacking = false;
+    public bool afterAttack = false;
     bool isDead = false;
     Transform playerTarget;
     [SerializeField] float detectRange;
@@ -75,6 +77,8 @@ public class SlimePatrolAndAttack : MonoBehaviour
     }
     void Attack()
     {
+        attacking = true;
+        Invoke("ResetAttack", 0.3f);
         rigid.velocity = Vector2.zero;
         transform.DOMove(playerTarget.position, 1.5f);
         anim.SetBool("isAttacking", true);
@@ -95,6 +99,11 @@ public class SlimePatrolAndAttack : MonoBehaviour
             anim.SetBool("isAttacking", false);
             StartCoroutine(ResetAfterAttack());
         }
+    }
+
+    private void ResetAttack()
+    {
+        attacking = false;
     }
     bool PlayerInRange()
     {
@@ -179,5 +188,12 @@ public class SlimePatrolAndAttack : MonoBehaviour
     public void RandomizeHp()
     {
         HP = Random.Range(2, 5);
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.tag.Equals("Attack"))
+        {
+            TakeDamage(GameObject.FindGameObjectWithTag("Player").GetComponent<Character>().damage);
+        }
     }
 }

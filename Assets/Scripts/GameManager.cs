@@ -33,12 +33,15 @@ public class GameManager : MonoBehaviour
     private bool canInteract = true;
     //
 
+    public UnityEngine.UI.Slider healthBar;
+    public Animator avatarAni;
 
     void Awake()
     {
         currentPlants = new List<PlantSeed>();
         sowseedsGameobject.SetActive(false);
         isUIOpen = false;
+        healthBar.maxValue = player.GetComponent<Character>().maxHP;
     }
 
     private void Start()
@@ -47,6 +50,7 @@ public class GameManager : MonoBehaviour
     }
     private void Update()
     {
+        AvatarControl();
         Setup();
         hit = Physics2D.Raycast(player.transform.position, Vector2.zero, Mathf.Infinity, tileMask);
         if (hit.collider == null && isUIOpen)
@@ -99,7 +103,14 @@ public class GameManager : MonoBehaviour
         }
     }
 
-
+    private void AvatarControl()
+    {
+        bool hitting = player.GetComponent<Character>().hitting;
+        bool die = player.GetComponent<Character>().die;
+        avatarAni.SetBool("hitting", hitting);
+        avatarAni.SetBool("die", die);
+        healthBar.value = player.GetComponent<Character>().HP; ;
+    }
     private void UIToggle()
     {
         if (!isUIOpen)
