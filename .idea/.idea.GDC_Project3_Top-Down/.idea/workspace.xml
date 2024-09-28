@@ -5,21 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="acbbdbe3-a33a-4fa7-b5ce-82264575f825" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.GDC_Project3_Top-Down/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GDC_Project3_Top-Down/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/New Universal Render Pipeline Asset.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/New Universal Render Pipeline Asset.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Enemy/Slime.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Enemy/Slime.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Seeds/HealingEgg.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Seeds/HealingEgg.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI/Canvas.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/UI/Canvas.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI/CanvasWithShop.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/UI/CanvasWithShop.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/TestScene3.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/TestScene3.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Character.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Character.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ChickenScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ChickenScript.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ChickenShopScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ChickenShopScript.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Inventory_UI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Inventory_UI.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlantSeed.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlantSeed.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SlimePatrolAndAttack.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SlimePatrolAndAttack.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Onion.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Onion.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Potato.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Potato.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Radish.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Radish.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Strawberry.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Strawberry.prefab" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,6 +43,14 @@
   }
 }</component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
+    <configuration name="Standalone Player" type="RunUnityExe" factoryName="Unity Executable">
+      <option name="EXE_PATH" value="$PROJECT_DIR$/../../Unity Games/GDC Project 3/GDC_Project3_TopDown.exe" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="D:\Unity Games\GDC Project 3" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <method v="2" />
+    </configuration>
     <configuration name="Start Unity" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="D:\Unity\Hub\Editor\2022.3.46f1\Editor\Unity.exe" />
       <option name="PROGRAM_PARAMETERS" value="-projectPath &quot;D:\Unity Projects\GDC_Project3_Top-Down&quot; -debugCodeOptimization" />
@@ -103,7 +100,7 @@
       <workItem from="1727457956158" duration="1132000" />
       <workItem from="1727462042498" duration="4645000" />
       <workItem from="1727482393527" duration="2168000" />
-      <workItem from="1727484800496" duration="100000" />
+      <workItem from="1727484811620" duration="807000" />
     </task>
     <servers />
   </component>
