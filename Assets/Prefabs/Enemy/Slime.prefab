@@ -157,6 +157,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e2e550fc89ae654395092735fd6ff27, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  deathSound: {fileID: 8300000, guid: 15d91d186cb5ab3449b9f56675531e27, type: 3}
   damage: 1
   attacking: 0
   afterAttack: 0

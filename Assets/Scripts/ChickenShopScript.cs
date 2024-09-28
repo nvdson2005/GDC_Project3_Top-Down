@@ -9,6 +9,7 @@ public class ChickenShopScript : MonoBehaviour
     [SerializeField] private int eggCount = 100;
     [SerializeField] private TMP_Text eggCountText;
     [SerializeField] private List<Slot_UI> slotUI = new List<Slot_UI>();
+    [SerializeField] private AudioClip buySound;
     
     private GameObject player;
     
@@ -57,6 +58,8 @@ public class ChickenShopScript : MonoBehaviour
             Debug.Log("Added item to player inventory");
             player.GetComponent<PlayerInventory>().inventory.Add(item);
             eggCount -= price;
+            
+            AudioManagerScript.Instance.PlaySFX(buySound);
         }
     }
     
@@ -69,6 +72,8 @@ public class ChickenShopScript : MonoBehaviour
             int price = 5;
             player.GetComponent<PlayerInventory>().inventory.Subtract(item);
             eggCount += price;
+            
+            AudioManagerScript.Instance.PlaySFX(buySound);
         }
     }
 }

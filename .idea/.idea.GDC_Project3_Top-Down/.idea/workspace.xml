@@ -6,15 +6,20 @@
   <component name="ChangeListManager">
     <list default="true" id="acbbdbe3-a33a-4fa7-b5ce-82264575f825" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.GDC_Project3_Top-Down/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GDC_Project3_Top-Down/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/DayNightScene.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/DayNightScene.unity.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/TestScene2.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/TestScene2.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Collectable.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Collectable.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Inventory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Inventory.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Sprout Lands - Sprites - Basic pack/Characters/Egg_And_Nest.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Sprout Lands - Sprites - Basic pack/Characters/Egg_And_Nest.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Sprout Lands - Sprites - Basic pack/Characters/Free Chicken Sprites.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Sprout Lands - Sprites - Basic pack/Characters/Free Chicken Sprites.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/UI/Spritesheet_UI_Flat.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/UI/Spritesheet_UI_Flat.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/UI/Spritesheet_UI_Flat_Animated.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/UI/Spritesheet_UI_Flat_Animated.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/New Universal Render Pipeline Asset.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/New Universal Render Pipeline Asset.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Enemy/Slime.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Enemy/Slime.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Seeds/HealingEgg.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Seeds/HealingEgg.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI/Canvas.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/UI/Canvas.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI/CanvasWithShop.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/UI/CanvasWithShop.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/TestScene3.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/TestScene3.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Character.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Character.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ChickenScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ChickenScript.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ChickenShopScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ChickenShopScript.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Inventory_UI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Inventory_UI.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlantSeed.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlantSeed.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SlimePatrolAndAttack.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SlimePatrolAndAttack.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,6 +28,9 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/UI/Core/Button.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;customColor&quot;: &quot;&quot;,
@@ -93,6 +101,9 @@
       <updated>1726992249619</updated>
       <workItem from="1726992254441" duration="364000" />
       <workItem from="1727457956158" duration="1132000" />
+      <workItem from="1727462042498" duration="4645000" />
+      <workItem from="1727482393527" duration="2168000" />
+      <workItem from="1727484800496" duration="100000" />
     </task>
     <servers />
   </component>

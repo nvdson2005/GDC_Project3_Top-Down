@@ -6,6 +6,8 @@ using UnityEngine;
 using DG.Tweening;
 public class SlimePatrolAndAttack : MonoBehaviour
 {
+    [SerializeField] private AudioClip deathSound;
+    
     ///
     int HP = 3;
     public int damage;
@@ -68,6 +70,8 @@ public class SlimePatrolAndAttack : MonoBehaviour
     }
     private void Die()
     {
+        AudioManagerScript.Instance.PlaySFX(deathSound);
+        
         isDead = true;
         anim.SetTrigger("Die");
         //This is used for drop loot items

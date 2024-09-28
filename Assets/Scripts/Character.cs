@@ -1,3 +1,4 @@
+using System;
 using DG.Tweening;
 using System.Collections;
 using System.Collections.Generic;
@@ -5,10 +6,15 @@ using UnityEngine;
 
 public class Character : MonoBehaviour
 {
+    [SerializeField] private AudioClip attackSound;
+    [SerializeField] private AudioClip hitSound;
+    
     public float speed;
+    private float originalSpeed;
     private float hitSpeed = 10;
     private Vector3 direction;
     public int damage;
+    private int originalDamage;
 
     public Animator animator;
 
@@ -26,6 +32,12 @@ public class Character : MonoBehaviour
 
     public bool die = false;
 
+    private void Start()
+    {
+        originalSpeed = speed;
+        originalDamage = damage;
+    }
+
     // Update is called once per frame
     void Update()
     {
@@ -37,6 +49,8 @@ public class Character : MonoBehaviour
         {
             animator.SetTrigger("attack");
             GetComponent<PlayerCombatHandler>().Attack(horizontal, vertical);
+            
+            AudioManagerScript.Instance.PlaySFX(attackSound);
         }
     }
 
@@ -110,6 +124,8 @@ public class Character : MonoBehaviour
 
     public void TakeDamage(GameObject enemy)
     {
+        AudioManagerScript.Instance.PlaySFX(hitSound);
+        
         if (!canGetHit)
         {
             return;
@@ -139,6 +155,36 @@ public class Character : MonoBehaviour
     {
         Time.timeScale = 0;
         die = true;
+    }
+
+    public void IncreaseHP(int amount)
+    {
+        if (HP + amount <= maxHP)
+        {
+            HP += amount;
+        }
+    }
+
+    public void DoubleAttack(float duration)
+    {
+        damage *= 2;
+        Invoke(nameof(ResetAttackPower), duration);
+    }
+
+    private void ResetAttackPower()
+    {
+        damage = originalDamage;
+    }
+    
+    public void DoubleSpeed(float duration)
+    {
+        speed *= 1.75f;
+        Invoke(nameof(ResetSpeed), duration);
+    }
+
+    private void ResetSpeed()
+    {
+        speed = originalSpeed;
     }
 
     private void OnCollisionEnter2D(Collision2D collision)

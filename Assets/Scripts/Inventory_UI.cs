@@ -45,4 +45,35 @@ public class Inventory_UI : MonoBehaviour
             }
         }
     }
+
+    public void EatEgg(int slotIndex)
+    {
+        CollectableType eggType = player.GetComponent<PlayerInventory>().inventory.slots[slotIndex].type;
+        switch (eggType)
+        {
+            case CollectableType.HEALING_EGG:
+                // Increase player health
+                player.GetComponent<Character>().IncreaseHP(2);
+                
+                // Subtract from inventory
+                player.GetComponent<PlayerInventory>().inventory.Subtract(eggType);
+                break;
+            
+            case CollectableType.ATTACK_EGG:
+                // Double player attack
+                player.GetComponent<Character>().DoubleAttack(30);
+                
+                // Subtract from inventory
+                player.GetComponent<PlayerInventory>().inventory.Subtract(eggType);
+                break;
+            
+            case CollectableType.SPEED_EGG:
+                // Double player attack
+                player.GetComponent<Character>().DoubleSpeed(30);
+                
+                // Subtract from inventory
+                player.GetComponent<PlayerInventory>().inventory.Subtract(eggType);
+                break;
+        }
+    }
 }

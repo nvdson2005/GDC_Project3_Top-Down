@@ -6,6 +6,7 @@ using UnityEngine;
 public class ChickenScript : MonoBehaviour
 {
     [SerializeField] private GameObject chickenShopUI;
+    [SerializeField] private AudioClip chickenShopOpenSound;
     
     // Start is called before the first frame update
     void Start()
@@ -22,20 +23,22 @@ public class ChickenScript : MonoBehaviour
     // Open shop when touching chicken
     private void OnCollisionEnter2D(Collision2D other)
     {
-        Debug.Log("Touching chicken");
         if (other.gameObject.GetComponent<Character>() != null)
         {
+            Debug.Log("Touching chicken");
             chickenShopUI.SetActive(true);
+            AudioManagerScript.Instance.PlaySFX(chickenShopOpenSound);
         }
     }
 
     // Close shop when not touching chicken
     private void OnCollisionExit2D(Collision2D other)
     {
-        Debug.Log("Not touching chicken");
         if (other.gameObject.GetComponent<Character>() != null)
         {
+            Debug.Log("Not touching chicken");
             chickenShopUI.SetActive(false);
+            AudioManagerScript.Instance.PlaySFX(chickenShopOpenSound);
         }
     }
 }

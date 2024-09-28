@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 770859185884633075}
   - component: {fileID: 5990989135681834607}
-  - component: {fileID: -7714250507337175257}
+  - component: {fileID: 6116178335612732248}
   m_Layer: 0
   m_Name: HealingEgg
   m_TagString: Untagged
@@ -78,7 +78,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.54389095, y: 0.5542573}
   m_EdgeRadius: 0
---- !u!114 &-7714250507337175257
+--- !u!114 &6116178335612732248
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -90,5 +90,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b333e257acb73944789ee5a7a569f4b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  icon: {fileID: 21300000, guid: 40363122f5d44f146af6ee62761eae1f, type: 3}
+  icon: {fileID: 21300000, guid: 79aa714b3c40c3e4795127b6b2b9725d, type: 3}
   type: 5

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
-using UnityEditor.Build.Content;
+//using UnityEditor.Build.Content;
 
 public class PlantSeed : MonoBehaviour
 {
